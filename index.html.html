@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachit Soni - Game Developer Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{font-family:'Nunito',sans-serif}
+body{box-sizing:border-box}
+
+/* Floating animations */
+@keyframes floatFast{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes floatMedium{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulseSoft{0%,100%{opacity:.3}50%{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+.animate-float-fast{animation:floatFast 6s ease-in-out infinite}
+.animate-float-medium{animation:floatMedium 8s ease-in-out infinite}
+.animate-float-slow{animation:floatSlow 10s ease-in-out infinite}
+.animate-pulse{animation:pulseSoft 4s ease-in-out infinite}
+.fade-up{animation:fadeUp 1s ease forwards;opacity:0}
+
+/* Project hover */
+.project-card{transition:all .4s ease}
+.project-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(139,92,246,.3)}
+.project-card img{transition:.4s}
+.project-card:hover img{transform:scale(1.08)}
+
+/* Frame */
+.gaming-frame{
+border:3px solid transparent;
+background:linear-gradient(#1e1b4b,#1e1b4b) padding-box,
+linear-gradient(135deg,#8b5cf6,#60a5fa,#34d399) border-box;
+border-radius:16px;
+}
+
+/* Scroll indicator */
+.scroll-indicator{
+width:26px;height:40px;border:2px solid rgba(139,92,246,.6);
+border-radius:20px;display:flex;justify-content:center;margin-top:40px;
+}
+.scroll-dot{
+width:4px;height:8px;background:#8b5cf6;border-radius:2px;margin-top:6px;
+animation:pulseSoft 2s infinite;
+}
+</style>
+</head>
+
+<body class="h-full bg-[#0f0a1e] text-white overflow-x-hidden">
+
+<!-- FLOATING DOODLES -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+
+<svg class="absolute top-20 left-10 w-16 text-purple-500/20 animate-float-fast" viewBox="0 0 64 64" fill="currentColor">
+<path d="M52 20H12c-4 0-8 4-8 8v8c0 4 4 8 8 8h40c4 0 8-4 8-8v-8c0-4-4-8-8-8z"/>
+</svg>
+
+<svg class="absolute top-40 right-20 w-12 text-blue-400/20 animate-float-slow" viewBox="0 0 64 64" fill="currentColor">
+<circle cx="32" cy="48" r="14"/>
+<rect x="28" y="16" width="8" height="28" rx="4"/>
+<circle cx="32" cy="12" r="8"/>
+</svg>
+
+<svg class="absolute bottom-40 left-16 w-14 text-emerald-400/20 animate-float-slow" viewBox="0 0 64 64" fill="currentColor">
+<path d="M28 8h8v20h20v8H36v20h-8V36H8v-8h20V8z"/>
+</svg>
+
+<svg class="absolute bottom-60 right-10 w-12 text-yellow-400/20 animate-float-medium" viewBox="0 0 16 16" fill="currentColor">
+<path d="M8 0h1v3h2v1h3v1h-3v2h3v1h-3v1h2v3h-1v-2H9v2H8V9H5v2H4V8h2V7H3V6h3V5H4V2h1v2h2V1h1z"/>
+</svg>
+
+</div>
+
+<div class="relative z-10">
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center">
+<div class="text-center px-6">
+
+<h1 class="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-violet-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent fade-up">
+Rachit Soni
+</h1>
+
+<h2 class="text-2xl md:text-3xl text-blue-300 mt-6 fade-up">
+Game Development & Design Student
+</h2>
+
+<p class="text-lg text-slate-400 max-w-2xl mx-auto mt-6 fade-up">
+Building meaningful gameplay experiences where every action matters and every moment feels alive
+</p>
+
+<div class="flex justify-center">
+<div class="scroll-indicator">
+<div class="scroll-dot"></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 px-6">
+<div class="max-w-4xl mx-auto gaming-frame p-10 bg-slate-900/60 backdrop-blur">
+<h2 class="text-4xl font-bold text-center mb-8 text-emerald-400">About Me</h2>
+<p class="text-slate-300 text-lg leading-relaxed text-center">
+I’m a Game Development and Design student who is learning how to build games that feel fun, smooth, and meaningful to play. I’m currently exploring how gameplay systems work and how mechanics can feel responsive and well balanced so that every action matters. As I grow and improve, my goal is to create games that challenge players, respect their skill, and leave them with experiences they’ll remember long after they’ve finished playing.
+</p>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="py-20 px-6">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-orange-400">
+My Projects
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div class="project-card gaming-frame bg-slate-900/60 overflow-hidden">
+<div class="h-48"><img src="portfolio-pictures/2d-maze-game.png" class="w-full h-full object-cover"></div>
+<div class="p-6 text-center"><h3 class="font-bold">2D Maze</h3></div>
+</div>
+
+<div class="project-card gaming-frame bg-slate-900/60 overflow-hidden">
+<div class="h-48"><img src="portfolio-pictures/classic-snake-game.png" class="w-full h-full object-cover"></div>
+<div class="p-6 text-center"><h3 class="font-bold">Classic Snake Game</h3></div>
+</div>
+
+<div class="project-card gaming-frame bg-slate-900/60 overflow-hidden">
+<div class="h-48"><img src="portfolio-pictures/3d-maze-game.png" class="w-full h-full object-cover"></div>
+<div class="p-6 text-center"><h3 class="font-bold">3D Maze Game</h3></div>
+</div>
+
+<div class="project-card gaming-frame bg-slate-900/60 overflow-hidden">
+<div class="h-48"><img src="portfolio-pictures/3d-FPP-terrain.png" class="w-full h-full object-cover"></div>
+<div class="p-6 text-center"><h3 class="font-bold">FPP Terrain</h3></div>
+</div>
+
+<div class="project-card gaming-frame bg-slate-900/60 overflow-hidden">
+<div class="h-48"><img src="portfolio-pictures/Project-Requiem-box.jpeg" class="w-full h-full object-cover"></div>
+<div class="p-6 text-center"><h3 class="font-bold">Project Requiem</h3></div>
+</div>
+
+<div class="project-card gaming-frame bg-slate-900/60 overflow-hidden">
+<div class="h-48"><img src="portfolio-pictures/basic-fpp-shooter.png" class="w-full h-full object-cover"></div>
+<div class="p-6 text-center"><h3 class="font-bold">Basic FPP Shooter</h3></div>
+</div>
+
+</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>
